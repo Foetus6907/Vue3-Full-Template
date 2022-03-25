@@ -7,7 +7,7 @@ export default {
 
 <template>
   <h1 class="text-bold text-secondary">Le champ du fort</h1>
-  <img src="@/assets/img/unnamed.jpg" alt="logo" id="logo" />
+  <img src="@/adapter/primary/assets/img/unnamed.jpg" alt="logo" id="logo" />
 </template>
 
 <style lang="sass" scoped>
