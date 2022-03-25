@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-import HelloWorld from "./components/HelloWorld.vue";
-
-const { t } = useI18n();
+import HelloWorld from "./components/HomeView.vue";
 </script>
 
 <template>
-  <HelloWorld :msg="t('welcome')" />
+  <HelloWorld />
 </template>
 
 <style lang="scss"></style>
