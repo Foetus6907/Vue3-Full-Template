@@ -4,12 +4,18 @@ import { resolve } from "path";
 import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
 import eslintPlugin from "vite-plugin-eslint";
+import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "./",
   plugins: [
-    vue(),
+    vue({
+      template: { transformAssetUrls },
+    }),
+    quasar({
+      sassVariables: "src/quasar-variables.sass",
+    }),
     vueI18n({
       include: resolve(__dirname, "./src/locales/**"),
       runtimeOnly: false,

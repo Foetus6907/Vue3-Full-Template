@@ -10,8 +10,19 @@ const i18n = createI18n({
   messages,
 });
 
+import { Quasar } from "quasar";
+
+// Import icon libraries
+import "@quasar/extras/material-icons/material-icons.css";
+
+// Import Quasar css
+import "quasar/src/css/index.sass";
+
 const app = createApp(App);
 app.use(i18n);
 app.use(store);
 app.use(router);
+app.use(Quasar, {
+  plugins: {}, // import Quasar plugins and add here
+});
 app.mount("#app");
